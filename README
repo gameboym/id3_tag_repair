@@ -1,0 +1,15 @@
+
+id3repair.exe [option] filename
+  -r, --repetition : When APIC frame comes out two times or more, it is deleted.
+  -d FRAMETYPE, --delete FRAMETYPE : All frames of a specified type are deleted.
+  -v, --verbose : Verbose mode.
+
+ID3 v2.3でのみ使用可能
+最低限の機能しか実装しないため多くを期待してはならない
+
+機能：
+	1.APICフレームのMIME指定でima ge/jpegとなっている物をimage/jpegと修正する
+	2.同一タイプのAPICフレームがあった場合2つ目以降を削除する(opt [-r])
+	3.指定されたタイプのフレームを削除する(opt [-d FRAMETYPE])
+	1～3実行後それに伴ったヘッダサイズ等のサイズ変更も行う
+
